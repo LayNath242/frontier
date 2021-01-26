@@ -1,0 +1,24 @@
+[package]
+name = "fc-consensus"
+version = "0.1.0"
+authors = ["Selendra <info@selendra.org>"]
+edition = "2018"
+license = "GPL-3.0-or-later WITH Classpath-exception-2.0"
+description = "Frontier consensus for substrate"
+
+[dependencies]
+codec = { package = "parity-scale-codec", version = "1.3.4", features = ["derive"] }
+sp-core = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-blockchain = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-runtime = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-api = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sc-client-api = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-block-builder = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-inherents = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+fp-consensus = { version = "0.1.0", path = "../../primitives/consensus" }
+sp-consensus = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+log = "0.4.8"
+futures = { version = "0.3.1", features = ["compat"] }
+sp-timestamp = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+derive_more = "0.99.11"
+prometheus-endpoint = { package = "substrate-prometheus-endpoint", git = "https://github.com/selendra/substrate.git", branch = "master"}
