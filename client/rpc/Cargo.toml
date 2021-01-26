@@ -1,0 +1,39 @@
+[package]
+name = "fc-rpc"
+version = "0.1.0"
+authors = ["Selendra <info@selendra.org>"]
+edition = "2018"
+description = "Ethereum RPC (web3) compatibility layer for Substrate."
+license = "GPL-3.0-or-later WITH Classpath-exception-2.0"
+
+[dependencies]
+jsonrpc-core = "15.0.0"
+jsonrpc-derive = "14.0.3"
+jsonrpc-core-client = "14.0.3"
+jsonrpc-pubsub = "15.0.0"
+log = "0.4.8"
+ethereum-types = "0.10.0"
+fc-consensus = { path = "../consensus" }
+fc-rpc-core = { path = "../rpc-core" }
+fp-rpc = { path = "../../primitives/rpc" }
+sp-io = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-runtime = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-api = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-transaction-pool = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sc-transaction-graph = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-storage = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-blockchain = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sc-service = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sc-client-api = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sc-rpc = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+sc-network = { git = "https://github.com/selendra/substrate.git", branch = "master" }
+pallet-evm = { path = "../../frame/evm" }
+pallet-ethereum = { path = "../../frame/ethereum" }
+ethereum = { git = "https://github.com/rust-blockchain/ethereum", branch = "master", features = ["with-codec"] }
+codec = { package = "parity-scale-codec", version = "1.3.4" }
+rlp = "0.5"
+futures = { version = "0.3.1", features = ["compat"] }
+sha3 = "0.8"
+rustc-hex = { version = "2.1.0", default-features = false }
+libsecp256k1 = "0.3"
+rand = "0.7"
