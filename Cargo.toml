@@ -20,4 +20,5 @@ members = [
 	"pallets/ethereum-chain-id",
 	"node",
 	"runtime",
+	"runtime/precompiles"
 ]

@@ -4383,6 +4383,20 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ac74c624d6b2d21f425f752262f42188365d7b8ff1aff74c82e45136510a4857"
 
 [[package]]
+name = "precompiles"
+version = "0.1.0"
+dependencies = [
+ "log",
+ "pallet-evm",
+ "pallet-evm-precompile-dispatch",
+ "pallet-evm-precompile-modexp",
+ "pallet-evm-precompile-simple",
+ "rustc-hex",
+ "sp-core",
+ "sp-std",
+]
+
+[[package]]
 name = "primitive-types"
 version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
