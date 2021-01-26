@@ -1,0 +1,20 @@
+[workspace]
+members = [
+	"frame/ethereum",
+	"frame/evm",
+	"frame/evm/precompile/simple",
+	"frame/evm/precompile/modexp",
+	"frame/evm/precompile/ed25519",
+	"frame/evm/precompile/bn128",
+	"frame/evm/precompile/blake2",
+	"frame/evm/precompile/dispatch",
+	"client/consensus",
+	"client/rpc-core",
+	"client/rpc",
+	"primitives/consensus",
+	"primitives/evm",
+	"primitives/rpc",
+	"node/node",
+	"node/runtime",
+	"node/test-utils/client",
+]
