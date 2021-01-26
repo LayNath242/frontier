@@ -1,13 +1,11 @@
 [package]
 name = "frontier-node"
 version = "2.0.0-dev"
-authors = ["Parity Technologies <admin@parity.io>"]
+authors = ["Selendra <info@selendra.org>"]
 description = "Substrate Node template"
 edition = "2018"
 license = "Unlicense"
 build = "build.rs"
-homepage = "https://substrate.dev"
-repository = "https://github.com/selendra/substrate/"
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
@@ -39,8 +37,8 @@ sc-consensus-manual-seal = { git = "https://github.com/selendra/substrate.git", 
 sp-consensus = { git = "https://github.com/selendra/substrate.git", branch = "master" }
 sc-consensus = { git = "https://github.com/selendra/substrate.git", branch = "master" }
 sp-timestamp = { git = "https://github.com/selendra/substrate.git", branch = "master" }
-pallet-evm = { path = "../../frame/evm" }
-pallet-ethereum = { path = "../../frame/ethereum" }
+pallet-evm = { path = "../frame/evm" }
+pallet-ethereum = { path = "../frame/ethereum" }
 sc-finality-grandpa = { git = "https://github.com/selendra/substrate.git", branch = "master" }
 sp-finality-grandpa = { git = "https://github.com/selendra/substrate.git", branch = "master" }
 sc-client-api = { git = "https://github.com/selendra/substrate.git", branch = "master" }
@@ -50,12 +48,12 @@ sp-block-builder = { git = "https://github.com/selendra/substrate.git", branch =
 sc-transaction-graph = { git = "https://github.com/selendra/substrate.git", branch = "master" }
 sc-telemetry = { git = "https://github.com/selendra/substrate.git", branch = "master" }
 
-fc-consensus = { path = "../../client/consensus" }
-fp-consensus = { path = "../../primitives/consensus" }
+fc-consensus = { path = "../client/consensus" }
+fp-consensus = { path = "../primitives/consensus" }
 frontier-runtime = { path = "../runtime" }
-fc-rpc = { path = "../../client/rpc" }
-fp-rpc = { path = "../../primitives/rpc" }
-fc-rpc-core = { path = "../../client/rpc-core" }
+fc-rpc = { path = "../client/rpc" }
+fp-rpc = { path = "../primitives/rpc" }
+fc-rpc-core = { path = "../client/rpc-core" }
 
 [build-dependencies]
 substrate-build-script-utils = { git = "https://github.com/selendra/substrate.git", branch = "master" }

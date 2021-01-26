@@ -18,7 +18,6 @@ members = [
 	"primitives/rpc",
 	"primitives/rpc/txpool",
 	"pallets/ethereum-chain-id",
-	"node/node",
-	"node/runtime",
-	"node/test-utils/client",
+	"node",
+	"runtime",
 ]
