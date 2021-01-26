@@ -1,0 +1,52 @@
+[package]
+name = "pallet-evm"
+version = "2.0.0"
+authors = ["Selendra <info@selendra.org>"]
+edition = "2018"
+license = "Apache-2.0"
+description = "FRAME EVM contracts pallet"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+serde = { version = "1.0.101", optional = true, features = ["derive"] }
+codec = { package = "parity-scale-codec", version = "1.3.4", default-features = false }
+frame-support = { default-features = false, git = "https://github.com/selendra/substrate.git", branch = "master" }
+frame-system = { default-features = false, git = "https://github.com/selendra/substrate.git", branch = "master" }
+pallet-timestamp = { default-features = false, git = "https://github.com/selendra/substrate.git", branch = "master" }
+pallet-balances = { default-features = false, git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-core = { default-features = false, git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-runtime = { default-features = false, git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-std = { default-features = false, git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-io = { default-features = false, git = "https://github.com/selendra/substrate.git", branch = "master" }
+fp-evm = { version = "0.8.0", default-features = false, path = "../../primitives/evm" }
+primitive-types = { version = "0.8.0", default-features = false, features = ["rlp", "byteorder"] }
+rlp = { version = "0.5", default-features = false }
+evm = { git = "https://github.com/joshorndorff/evm", branch = "joshy-update", default-features = false, features = ["with-codec"] }
+evm-runtime = { git = "https://github.com/joshorndorff/evm", branch = "joshy-update", default-features = false }
+evm-gasometer = { git = "https://github.com/joshorndorff/evm", branch = "joshy-update", default-features = false }
+sha3 = { version = "0.8", default-features = false }
+
+[features]
+default = ["std"]
+std = [
+	"serde",
+	"codec/std",
+	"sp-core/std",
+	"sp-runtime/std",
+	"frame-support/std",
+	"frame-system/std",
+	"pallet-balances/std",
+	"sp-io/std",
+	"sp-std/std",
+	"fp-evm/std",
+	"sha3/std",
+	"rlp/std",
+	"primitive-types/std",
+	"evm/std",
+	"evm/with-serde",
+	"evm-runtime/std",
+	"evm-gasometer/std",
+	"pallet-timestamp/std",
+]

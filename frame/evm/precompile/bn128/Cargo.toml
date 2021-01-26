@@ -1,0 +1,23 @@
+[package]
+name = "pallet-evm-precompile-bn128"
+version = "2.0.0"
+authors = ["Selendra <info@selendra.org>"]
+edition = "2018"
+license = "Apache-2.0"
+description = "BN128 precompiles for EVM pallet."
+
+[dependencies]
+sp-core = { default-features = false, git = "https://github.com/selendra/substrate.git", branch = "master" }
+sp-io = { default-features = false, git = "https://github.com/selendra/substrate.git", branch = "master" }
+fp-evm = { version = "0.8.0", default-features = false, path = "../../../../primitives/evm" }
+evm = { git = "https://github.com/joshorndorff/evm.git", branch = "joshy-update", default-features = false, features = ["with-codec"] }
+bn = { package = "substrate-bn", version = "0.5", default-features = false }
+
+[features]
+default = ["std"]
+std = [
+	"sp-core/std",
+	"sp-io/std",
+	"fp-evm/std",
+	"evm/std",
+]
