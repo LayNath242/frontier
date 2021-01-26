@@ -1268,6 +1268,40 @@ dependencies = [
 ]
 
 [[package]]
+name = "fc-rpc-core-txpool"
+version = "0.1.0"
+dependencies = [
+ "ethereum",
+ "ethereum-types",
+ "fc-rpc-core",
+ "jsonrpc-core 15.1.0",
+ "jsonrpc-core-client 14.2.0",
+ "jsonrpc-derive 14.2.2",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "fc-rpc-txpool"
+version = "0.1.0"
+dependencies = [
+ "ethereum",
+ "ethereum-types",
+ "fc-rpc-core-txpool",
+ "fp-rpc-txpool",
+ "frame-system",
+ "jsonrpc-core 15.1.0",
+ "serde",
+ "sha3 0.8.2",
+ "sp-api",
+ "sp-blockchain",
+ "sp-io",
+ "sp-runtime",
+ "sp-std",
+ "sp-transaction-pool",
+]
+
+[[package]]
 name = "fdlimit"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1378,6 +1412,17 @@ dependencies = [
  "parity-scale-codec",
  "sp-api",
  "sp-core",
+ "sp-io",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
+name = "fp-rpc-txpool"
+version = "0.1.0"
+dependencies = [
+ "ethereum",
+ "sp-api",
  "sp-io",
  "sp-runtime",
  "sp-std",
