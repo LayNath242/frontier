@@ -167,7 +167,7 @@ pub fn new_partial(config: &Configuration, sealing: Option<Sealing>) -> Result<
 pub fn new_full(
 	config: Configuration,
 	sealing: Option<Sealing>,
-	enable_dev_signer: bool,
+	// _enable_dev_signer: bool,
 ) -> Result<TaskManager, ServiceError> {
 	let sc_service::PartialComponents {
 			client,
@@ -222,7 +222,6 @@ pub fn new_full(
 				graph: pool.pool().clone(),
 				deny_unsafe,
 				is_authority,
-				enable_dev_signer,
 				network: network.clone(),
 				pending_transactions: pending.clone(),
 				command_sink: Some(command_sink.clone())

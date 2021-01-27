@@ -16,6 +16,7 @@ log = "0.4.8"
 structopt = "0.3.8"
 jsonrpc-core = "15.0.0"
 jsonrpc-pubsub = "15.0.0"
+serde_json = "1.0"
 
 sp-api = { git = "https://github.com/selendra/substrate.git", branch = "master" }
 sp-blockchain = { git = "https://github.com/selendra/substrate.git", branch = "master" }
@@ -54,6 +55,8 @@ frontier-runtime = { path = "../runtime" }
 fc-rpc = { path = "../client/rpc" }
 fp-rpc = { path = "../primitives/rpc" }
 fc-rpc-core = { path = "../client/rpc-core" }
+fc-rpc-txpool = { path = "../client/rpc/tx-pool" }
+fp-rpc-txpool = { path = "../primitives/rpc/txpool" }
 
 [build-dependencies]
 substrate-build-script-utils = { git = "https://github.com/selendra/substrate.git", branch = "master" }

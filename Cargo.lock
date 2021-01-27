@@ -11,6 +11,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "account"
+version = "0.1.1"
+dependencies = [
+ "blake2-rfc",
+ "hex",
+ "log",
+ "pallet-evm",
+ "parity-scale-codec",
+ "serde",
+ "sha3 0.8.2",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
+ "sp-runtime-interface",
+ "sp-std",
+]
+
+[[package]]
 name = "addr2line"
 version = "0.14.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1564,8 +1582,10 @@ dependencies = [
  "fc-consensus",
  "fc-rpc",
  "fc-rpc-core",
+ "fc-rpc-txpool",
  "fp-consensus",
  "fp-rpc",
+ "fp-rpc-txpool",
  "frontier-runtime",
  "futures 0.3.10",
  "jsonrpc-core 15.1.0",
@@ -1589,6 +1609,7 @@ dependencies = [
  "sc-telemetry",
  "sc-transaction-graph",
  "sc-transaction-pool",
+ "serde_json",
  "sp-api",
  "sp-block-builder",
  "sp-blockchain",
@@ -1609,7 +1630,9 @@ dependencies = [
 name = "frontier-runtime"
 version = "2.0.0-dev"
 dependencies = [
+ "account",
  "fp-rpc",
+ "fp-rpc-txpool",
  "frame-executive",
  "frame-support",
  "frame-system",
@@ -1617,6 +1640,7 @@ dependencies = [
  "pallet-aura",
  "pallet-balances",
  "pallet-ethereum",
+ "pallet-ethereum-chain-id",
  "pallet-evm",
  "pallet-evm-precompile-simple",
  "pallet-grandpa",
@@ -1626,6 +1650,7 @@ dependencies = [
  "pallet-transaction-payment",
  "pallet-transaction-payment-rpc-runtime-api",
  "parity-scale-codec",
+ "precompiles",
  "serde",
  "sp-api",
  "sp-block-builder",
